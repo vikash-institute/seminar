@@ -251,37 +251,63 @@
 
         .participants-list strong {
             display: block;
-            color: #333;
             margin-bottom: 8px;
+            color: #333;
         }
 
         .participant-badge {
             display: inline-block;
-            background: #e7f5ff;
-            color: #1971c2;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 10px;
+            border-radius: 4px;
             margin-right: 8px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            font-size: 13px;
         }
 
         .captain-badge {
-            display: inline-block;
-            background: #fff3bf;
-            color: #f08c00;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 11px;
+            background: #ffd700;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
             margin-left: 5px;
-            font-weight: 600;
+            font-weight: bold;
         }
 
-        .empty-message {
-            text-align: center;
-            color: #999;
-            padding: 40px 20px;
-            font-size: 14px;
+        .card-actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-edit, .btn-delete {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .btn-edit {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #45a049;
+        }
+
+        .btn-delete {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: #da190b;
         }
 
         .alert {
@@ -291,53 +317,16 @@
             font-size: 14px;
         }
 
-        .alert-error {
-            background: #ffe0e0;
-            color: #d63031;
-            border: 1px solid #ffb3b3;
-        }
-
         .alert-success {
-            background: #e8f8f5;
-            color: #27ae60;
-            border: 1px solid #a9dfbf;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
         }
 
-        .card-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-edit, .btn-delete {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.3s;
-            flex: 1;
-            min-width: 100px;
-        }
-
-        .btn-edit {
-            background: #4dabf7;
-            color: white;
-        }
-
-        .btn-edit:hover {
-            background: #339af0;
-        }
-
-        .btn-delete {
-            background: #ff6b6b;
-            color: white;
-        }
-
-        .btn-delete:hover {
-            background: #ff5252;
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
 
         .modal {
@@ -348,81 +337,62 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal.show {
-            display: flex;
+            background: rgba(0, 0, 0, 0.5);
             align-items: center;
             justify-content: center;
         }
 
-        .modal-content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.3s;
+        .modal.show {
+            display: flex;
         }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
         .modal-header {
-            font-size: 20px;
-            font-weight: 600;
             margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
             color: #333;
+            font-size: 20px;
         }
 
         .modal-footer {
+            margin-top: 20px;
             display: flex;
             gap: 10px;
-            margin-top: 20px;
+            justify-content: flex-end;
         }
 
         .btn-cancel {
-            flex: 1;
-            padding: 12px;
-            background: #e0e0e0;
-            color: #333;
+            padding: 10px 20px;
+            background: #6c757d;
+            color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-weight: 500;
-            transition: background 0.3s;
+            font-size: 14px;
         }
 
         .btn-cancel:hover {
-            background: #d0d0d0;
+            background: #5a6268;
         }
 
         .btn-confirm {
-            flex: 1;
-            padding: 12px;
+            padding: 10px 20px;
             background: #667eea;
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-weight: 500;
-            transition: background 0.3s;
+            font-size: 14px;
         }
 
         .btn-confirm:hover {
@@ -431,9 +401,15 @@
 
         .loading {
             text-align: center;
-            padding: 20px;
-            color: #667eea;
-            font-size: 14px;
+            padding: 40px;
+            color: #666;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
         }
 
         @media (max-width: 768px) {
@@ -441,48 +417,21 @@
                 font-size: 22px;
             }
 
-            .content {
-                padding: 20px 15px;
-            }
-
-            .form-section {
-                padding: 20px 15px;
-            }
-
             .tab-button {
                 font-size: 14px;
                 padding: 12px;
             }
 
-            .card-actions {
+            .content {
+                padding: 20px 15px;
+            }
+
+            .participant-input {
                 flex-direction: column;
             }
-        }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            .header {
-                padding: 25px 15px;
-            }
-
-            .header h1 {
-                font-size: 18px;
-            }
-
-            .content {
-                padding: 15px;
-            }
-
-            .group-card, .solo-card {
-                padding: 15px;
-            }
-
-            .modal-content {
-                width: 95%;
-                padding: 20px;
+            .btn-remove {
+                width: 100%;
             }
         }
     </style>
@@ -490,89 +439,104 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎓 Vikash Institute of Technology</h1>
+            <h1>🎓 Vikash Institute of Engineering & Technology</h1>
             <p>Seminar Registration Portal</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab('group')">Group Registration</button>
-            <button class="tab-button" onclick="switchTab('solo')">Solo Registration</button>
+            <button class="tab-button active" onclick="switchTab('group')">👥 Group Registration</button>
+            <button class="tab-button" onclick="switchTab('solo')">👤 Solo Registration</button>
         </div>
 
         <div class="content">
-            <!-- GROUP TAB -->
-            <div id="group" class="tab-content active">
+            <!-- GROUP REGISTRATION TAB -->
+            <div id="groupTab" class="tab-content active">
                 <div class="form-section">
                     <h2>Register Your Group</h2>
                     <div id="groupAlert"></div>
+                    
                     <div class="form-group">
                         <label for="groupName">Group Name *</label>
-                        <input type="text" id="groupName" placeholder="e.g., Team Alpha, Group A" required>
+                        <input type="text" id="groupName" placeholder="e.g., Tech Innovators" required>
                     </div>
+
                     <div class="form-group">
                         <label for="topicName">Topic Name *</label>
-                        <input type="text" id="topicName" placeholder="e.g., AI in Healthcare, Blockchain" required>
+                        <input type="text" id="topicName" placeholder="e.g., Artificial Intelligence in Healthcare" required>
+                        <small>Choose a unique topic for your seminar</small>
                     </div>
+
                     <div class="form-group">
-                        <label for="captainPin">Captain PIN (4 digits - to edit/delete group) *</label>
-                        <input type="text" id="captainPin" placeholder="Enter 4-digit PIN (e.g., 1234)" maxlength="4" pattern="\d{4}" required>
-                        <small>⚠️ Save this PIN! You'll need it to edit or delete the group. Don't share it!</small>
-                    </div>
-                    <div class="form-group">
-                        <label>Participant Names (First person is Captain) *</label>
-                        <div class="participants-container" id="groupParticipantsContainer">
+                        <label>Group Members (2-5 people) *</label>
+                        <small>First member will be the captain</small>
+                        <div class="participants-container" id="participantsContainer">
                             <div class="participant-input">
-                                <input type="text" class="participant-name" placeholder="Captain name (first person)" required>
-                                <button type="button" class="btn-remove" onclick="removeGroupParticipant(this)">Remove</button>
+                                <input type="text" placeholder="Captain Name" class="participant-name" required>
+                            </div>
+                            <div class="participant-input">
+                                <input type="text" placeholder="Member 2 Name" class="participant-name" required>
+                                <button type="button" class="btn-remove" onclick="removeParticipant(this)">Remove</button>
                             </div>
                         </div>
-                        <button type="button" class="btn-add-participant" onclick="addGroupParticipant()">+ Add Participant</button>
+                        <button type="button" class="btn-add-participant" onclick="addParticipant()">+ Add Member</button>
                     </div>
-                    <button class="btn-submit" onclick="submitGroup()">Submit Group</button>
+
+                    <button type="button" class="btn-submit" onclick="submitGroup()">Register Group</button>
                 </div>
 
                 <div class="display-section">
-                    <h2>Registered Groups</h2>
-                    <div id="groupsList"><div class="loading">Loading groups...</div></div>
+                    <h2>📋 Registered Groups</h2>
+                    <div id="groupsList">
+                        <div class="loading">Loading groups...</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- SOLO TAB -->
-            <div id="solo" class="tab-content">
+            <!-- SOLO REGISTRATION TAB -->
+            <div id="soloTab" class="tab-content">
                 <div class="form-section">
-                    <h2>Register Solo Participation</h2>
+                    <h2>Register as Solo Participant</h2>
                     <div id="soloAlert"></div>
+                    
                     <div class="form-group">
                         <label for="soloName">Your Name *</label>
                         <input type="text" id="soloName" placeholder="Enter your full name" required>
                     </div>
+
                     <div class="form-group">
                         <label for="soloTopic">Topic Name *</label>
-                        <input type="text" id="soloTopic" placeholder="e.g., Cloud Computing, Cybersecurity" required>
+                        <input type="text" id="soloTopic" placeholder="e.g., Blockchain Technology" required>
+                        <small>Choose a unique topic for your seminar</small>
                     </div>
-                    <button class="btn-submit" onclick="submitSolo()">Submit Solo Registration</button>
+
+                    <button type="button" class="btn-submit" onclick="submitSolo()">Register Solo</button>
                 </div>
 
                 <div class="display-section">
-                    <h2>Solo Participants</h2>
-                    <div id="soloList"><div class="loading">Loading participants...</div></div>
+                    <h2>📋 Registered Solo Participants</h2>
+                    <div id="soloList">
+                        <div class="loading">Loading participants...</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- GROUP EDIT MODAL - Captain PIN verification -->
+    <!-- GROUP EDIT MODAL -->
     <div id="groupEditModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">🔐 Enter Captain PIN to Edit</div>
+            <div class="modal-header">
+                <h2>🔒 Verify Group Captain</h2>
+            </div>
             <div id="groupEditAlert"></div>
             <div class="form-group">
-                <label for="captainPinVerify">Captain PIN (4 digits) *</label>
-                <input type="text" id="captainPinVerify" placeholder="Enter PIN" maxlength="4" pattern="\d{4}" required>
+                <label>Enter Captain's Name</label>
+                <input type="text" id="verifyCaptainName" placeholder="Captain name">
+                <small>Only the captain can edit group details</small>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeGroupEditModal()">Cancel</button>
-                <button class="btn-confirm" onclick="verifyCaptainPin()">Verify & Edit</button>
+                <button class="btn-confirm" onclick="verifyGroupForEdit()">Verify</button>
             </div>
         </div>
     </div>
@@ -580,20 +544,21 @@
     <!-- GROUP EDIT DETAILS MODAL -->
     <div id="groupEditDetailsModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">Edit Group Details</div>
+            <div class="modal-header">
+                <h2>✏️ Edit Group Details</h2>
+            </div>
             <div id="groupEditDetailsAlert"></div>
             <div class="form-group">
-                <label for="editGroupName">Group Name *</label>
-                <input type="text" id="editGroupName" required>
+                <label>Group Name</label>
+                <input type="text" id="editGroupName">
             </div>
             <div class="form-group">
-                <label for="editTopicName">Topic Name *</label>
-                <input type="text" id="editTopicName" required>
+                <label>Topic Name</label>
+                <input type="text" id="editTopicName">
             </div>
             <div class="form-group">
-                <label>Participants *</label>
-                <div class="participants-container" id="editGroupParticipantsContainer"></div>
-                <button type="button" class="btn-add-participant" onclick="addEditGroupParticipant()">+ Add Participant</button>
+                <label>Group Members</label>
+                <div id="editParticipantsContainer"></div>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeGroupEditDetailsModal()">Cancel</button>
@@ -605,16 +570,18 @@
     <!-- GROUP DELETE MODAL -->
     <div id="groupDeleteModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">🔐 Enter Captain PIN to Delete</div>
+            <div class="modal-header">
+                <h2>🗑️ Delete Group Registration</h2>
+            </div>
             <div id="groupDeleteAlert"></div>
-            <p style="color: #666; margin-bottom: 20px;">⚠️ This action cannot be undone. Are you sure?</p>
             <div class="form-group">
-                <label for="captainPinDelete">Captain PIN (4 digits) *</label>
-                <input type="text" id="captainPinDelete" placeholder="Enter PIN" maxlength="4" pattern="\d{4}" required>
+                <label>Enter Captain's Name to Confirm</label>
+                <input type="text" id="groupVerifyDelete" placeholder="Captain name">
+                <small>This action cannot be undone</small>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeGroupDeleteModal()">Cancel</button>
-                <button class="btn-delete" onclick="verifyCaptainPinDelete()" style="background: #ff6b6b; flex: 1;">Delete Group</button>
+                <button class="btn-confirm" onclick="verifyGroupForDelete()">Delete</button>
             </div>
         </div>
     </div>
@@ -622,15 +589,17 @@
     <!-- SOLO EDIT MODAL -->
     <div id="soloEditModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">Edit Your Details</div>
+            <div class="modal-header">
+                <h2>🔒 Verify Your Identity</h2>
+            </div>
             <div id="soloEditAlert"></div>
             <div class="form-group">
-                <label for="verifySoloName">Enter Your Name *</label>
-                <input type="text" id="verifySoloName" placeholder="Enter your name to verify" required>
+                <label>Enter Your Name</label>
+                <input type="text" id="verifySoloName" placeholder="Your name">
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeSoloEditModal()">Cancel</button>
-                <button class="btn-confirm" onclick="verifySoloForEdit()">Verify & Edit</button>
+                <button class="btn-confirm" onclick="verifySoloForEdit()">Verify</button>
             </div>
         </div>
     </div>
@@ -638,15 +607,17 @@
     <!-- SOLO EDIT DETAILS MODAL -->
     <div id="soloEditDetailsModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">Edit Your Details</div>
+            <div class="modal-header">
+                <h2>✏️ Edit Your Details</h2>
+            </div>
             <div id="soloEditDetailsAlert"></div>
             <div class="form-group">
-                <label for="editSoloName">Your Name *</label>
-                <input type="text" id="editSoloName" required>
+                <label>Your Name</label>
+                <input type="text" id="editSoloName">
             </div>
             <div class="form-group">
-                <label for="editSoloTopic">Topic Name *</label>
-                <input type="text" id="editSoloTopic" required>
+                <label>Topic Name</label>
+                <input type="text" id="editSoloTopic">
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeSoloEditDetailsModal()">Cancel</button>
@@ -658,26 +629,27 @@
     <!-- SOLO DELETE MODAL -->
     <div id="soloDeleteModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">Verify Name to Delete</div>
+            <div class="modal-header">
+                <h2>🗑️ Delete Registration</h2>
+            </div>
             <div id="soloDeleteAlert"></div>
-            <p style="color: #666; margin-bottom: 20px;">⚠️ This action cannot be undone. Are you sure?</p>
             <div class="form-group">
-                <label for="soloVerifyDelete">Enter Your Name *</label>
-                <input type="text" id="soloVerifyDelete" placeholder="Enter your name" required>
+                <label>Enter Your Name to Confirm</label>
+                <input type="text" id="soloVerifyDelete" placeholder="Your name">
+                <small>This action cannot be undone</small>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" onclick="closeSoloDeleteModal()">Cancel</button>
-                <button class="btn-delete" onclick="verifySoloForDelete()" style="background: #ff6b6b; flex: 1;">Delete</button>
+                <button class="btn-confirm" onclick="verifySoloForDelete()">Delete</button>
             </div>
         </div>
     </div>
 
+    <!-- Firebase SDK -->
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
-        import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc } 
-        from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -692,87 +664,111 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
         const db = getFirestore(app);
 
+        // Make db and functions available globally
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+        window.getDocs = getDocs;
+        window.doc = doc;
+        window.updateDoc = updateDoc;
+        window.deleteDoc = deleteDoc;
+
+        // Data storage
+        let allGroups = [];
+        let allSolo = [];
         let currentEditGroupId = null;
         let currentDeleteGroupId = null;
         let currentEditSoloId = null;
         let currentDeleteSoloId = null;
 
-        let allGroups = [];
-        let allSolo = [];
+        window.allGroups = allGroups;
+        window.allSolo = allSolo;
+
+        // Tab switching
+        window.switchTab = function(tab) {
+            const groupTab = document.getElementById('groupTab');
+            const soloTab = document.getElementById('soloTab');
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            if (tab === 'group') {
+                groupTab.classList.add('active');
+                soloTab.classList.remove('active');
+                tabButtons[0].classList.add('active');
+                tabButtons[1].classList.remove('active');
+                displayGroups();
+            } else {
+                soloTab.classList.add('active');
+                groupTab.classList.remove('active');
+                tabButtons[1].classList.add('active');
+                tabButtons[0].classList.remove('active');
+                displaySolo();
+            }
+        }
+
+        // Participant management
+        window.addParticipant = function() {
+            const container = document.getElementById('participantsContainer');
+            const currentCount = container.querySelectorAll('.participant-input').length;
+
+            if (currentCount >= 5) {
+                alert('Maximum 5 members allowed');
+                return;
+            }
+
+            const newInput = document.createElement('div');
+            newInput.className = 'participant-input';
+            newInput.innerHTML = `
+                <input type="text" placeholder="Member ${currentCount + 1} Name" class="participant-name" required>
+                <button type="button" class="btn-remove" onclick="removeParticipant(this)">Remove</button>
+            `;
+            container.appendChild(newInput);
+        }
+
+        window.removeParticipant = function(button) {
+            const container = document.getElementById('participantsContainer');
+            const currentCount = container.querySelectorAll('.participant-input').length;
+
+            if (currentCount <= 2) {
+                alert('Minimum 2 members required');
+                return;
+            }
+
+            button.parentElement.remove();
+        }
 
         // Fetch data from Firestore
         async function fetchData() {
             try {
                 // Fetch groups
                 const groupsSnapshot = await getDocs(collection(db, "groups"));
-                allGroups = [];
-                groupsSnapshot.forEach((doc) => {
-                    allGroups.push({ id: doc.id, ...doc.data() });
-                });
+                allGroups = groupsSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                window.allGroups = allGroups;
 
                 // Fetch solo participants
                 const soloSnapshot = await getDocs(collection(db, "solo"));
-                allSolo = [];
-                soloSnapshot.forEach((doc) => {
-                    allSolo.push({ id: doc.id, ...doc.data() });
-                });
-
-                return { groups: allGroups, solo: allSolo };
+                allSolo = soloSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                window.allSolo = allSolo;
             } catch (error) {
                 console.error("Error fetching data:", error);
-                return { groups: [], solo: [] };
             }
         }
 
-        window.switchTab = function(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-            if (tabName === 'group') displayGroups();
-            else displaySolo();
-        }
-
         // ============== GROUP FUNCTIONS ==============
-        window.addGroupParticipant = function() {
-            const container = document.getElementById('groupParticipantsContainer');
-            const div = document.createElement('div');
-            div.className = 'participant-input';
-            div.innerHTML = `
-                <input type="text" class="participant-name" placeholder="Participant name" required>
-                <button type="button" class="btn-remove" onclick="removeGroupParticipant(this)">Remove</button>
-            `;
-            container.appendChild(div);
-        }
-
-        window.removeGroupParticipant = function(btn) {
-            btn.parentElement.remove();
-        }
-
-        window.addEditGroupParticipant = function() {
-            const container = document.getElementById('editGroupParticipantsContainer');
-            const div = document.createElement('div');
-            div.className = 'participant-input';
-            div.innerHTML = `
-                <input type="text" class="participant-name" placeholder="Participant name" required>
-                <button type="button" class="btn-remove" onclick="removeEditGroupParticipant(this)">Remove</button>
-            `;
-            container.appendChild(div);
-        }
-
-        window.removeEditGroupParticipant = function(btn) {
-            btn.parentElement.remove();
-        }
-
         window.submitGroup = async function() {
             const groupName = document.getElementById('groupName').value.trim();
             const topicName = document.getElementById('topicName').value.trim();
-            const captainPin = document.getElementById('captainPin').value.trim();
-            const participantInputs = document.querySelectorAll('#groupParticipantsContainer .participant-name');
-            const participants = Array.from(participantInputs).map(input => input.value.trim()).filter(name => name !== '');
+            const participantInputs = document.querySelectorAll('.participant-name');
+            const participants = Array.from(participantInputs)
+                .map(input => input.value.trim())
+                .filter(name => name !== '');
 
             const alertDiv = document.getElementById('groupAlert');
             alertDiv.innerHTML = '';
@@ -785,73 +781,74 @@
                 showAlert('groupAlert', 'Please enter a topic name', 'error');
                 return;
             }
-            if (!captainPin || captainPin.length !== 4 || !/^\d+$/.test(captainPin)) {
-                showAlert('groupAlert', '❌ PIN must be exactly 4 digits!', 'error');
-                return;
-            }
-            if (participants.length === 0) {
-                showAlert('groupAlert', 'Please add at least one participant', 'error');
+            if (participants.length < 2) {
+                showAlert('groupAlert', 'Please add at least 2 members', 'error');
                 return;
             }
 
             // Fetch latest data
             await fetchData();
 
-            if (allGroups.some(g => g.topicName.toLowerCase() === topicName.toLowerCase())) {
-                showAlert('groupAlert', '❌ This topic is already registered!', 'error');
-                return;
-            }
-
-            if (allGroups.some(g => g.groupName.toLowerCase() === groupName.toLowerCase())) {
-                showAlert('groupAlert', '❌ This group name is already taken!', 'error');
-                return;
-            }
-
             const allExistingNames = [
                 ...allGroups.flatMap(g => g.participants),
                 ...allSolo.map(s => s.name)
             ].map(name => name.toLowerCase());
 
-            const duplicateParticipant = participants.find(p => allExistingNames.includes(p.toLowerCase()));
+            for (let participant of participants) {
+                if (allExistingNames.includes(participant.toLowerCase())) {
+                    showAlert('groupAlert', `❌ "${participant}" is already registered!`, 'error');
+                    return;
+                }
+            }
 
-            if (duplicateParticipant) {
-                showAlert('groupAlert', `❌ "${duplicateParticipant}" is already registered!`, 'error');
+            const duplicates = participants.filter((item, index) => participants.indexOf(item) !== index);
+            if (duplicates.length > 0) {
+                showAlert('groupAlert', `❌ Duplicate names found: ${duplicates.join(', ')}`, 'error');
+                return;
+            }
+
+            const allTopics = [
+                ...allGroups.map(g => g.topicName.toLowerCase()),
+                ...allSolo.map(s => s.topic.toLowerCase())
+            ];
+
+            if (allTopics.includes(topicName.toLowerCase())) {
+                showAlert('groupAlert', '❌ This topic is already registered!', 'error');
                 return;
             }
 
             try {
-                // Add to Firestore
                 await addDoc(collection(db, "groups"), {
-                    groupName,
-                    topicName,
-                    captain: participants[0],
-                    pin: captainPin,
-                    participants,
+                    groupName: groupName,
+                    topicName: topicName,
+                    participants: participants,
                     timestamp: new Date().toISOString()
                 });
 
                 showAlert('groupAlert', '✓ Group registered successfully!', 'success');
                 document.getElementById('groupName').value = '';
                 document.getElementById('topicName').value = '';
-                document.getElementById('captainPin').value = '';
-                document.getElementById('groupParticipantsContainer').innerHTML = `
+                document.getElementById('participantsContainer').innerHTML = `
                     <div class="participant-input">
-                        <input type="text" class="participant-name" placeholder="Captain name (first person)" required>
-                        <button type="button" class="btn-remove" onclick="removeGroupParticipant(this)">Remove</button>
+                        <input type="text" placeholder="Captain Name" class="participant-name" required>
+                    </div>
+                    <div class="participant-input">
+                        <input type="text" placeholder="Member 2 Name" class="participant-name" required>
+                        <button type="button" class="btn-remove" onclick="removeParticipant(this)">Remove</button>
                     </div>
                 `;
                 await fetchData();
                 displayGroups();
             } catch (error) {
                 console.error("Error adding group:", error);
-                showAlert('groupAlert', '❌ Error saving group. Please try again.', 'error');
+                showAlert('groupAlert', '❌ Error saving registration. Please try again.', 'error');
             }
         }
 
         window.openGroupEditModal = function(groupId) {
             currentEditGroupId = groupId;
             document.getElementById('groupEditAlert').innerHTML = '';
-            document.getElementById('captainPinVerify').value = '';
+            document.getElementById('verifyCaptainName').value = '';
             document.getElementById('groupEditModal').classList.add('show');
         }
 
@@ -859,12 +856,12 @@
             document.getElementById('groupEditModal').classList.remove('show');
         }
 
-        window.verifyCaptainPin = function() {
-            const pin = document.getElementById('captainPinVerify').value.trim();
+        window.verifyGroupForEdit = function() {
+            const captainName = document.getElementById('verifyCaptainName').value.trim();
             const group = allGroups.find(g => g.id === currentEditGroupId);
 
-            if (pin !== group.pin) {
-                showAlert('groupEditAlert', '❌ PIN is incorrect!', 'error');
+            if (captainName.toLowerCase() !== group.participants[0].toLowerCase()) {
+                showAlert('groupEditAlert', '❌ Captain name does not match!', 'error');
                 return;
             }
 
@@ -878,19 +875,64 @@
             document.getElementById('editGroupName').value = group.groupName;
             document.getElementById('editTopicName').value = group.topicName;
 
-            const container = document.getElementById('editGroupParticipantsContainer');
-            container.innerHTML = '';
-            group.participants.forEach(participant => {
-                const div = document.createElement('div');
-                div.className = 'participant-input';
-                div.innerHTML = `
-                    <input type="text" class="participant-name" value="${participant}" required>
-                    <button type="button" class="btn-remove" onclick="removeEditGroupParticipant(this)">Remove</button>
-                `;
-                container.appendChild(div);
-            });
+            const editContainer = document.getElementById('editParticipantsContainer');
+            editContainer.innerHTML = group.participants.map((participant, index) => `
+                <div class="participant-input" style="margin-bottom: 10px;">
+                    <input type="text" value="${participant}" class="edit-participant-name" 
+                           placeholder="Member ${index + 1}" 
+                           ${index === 0 ? 'readonly style="background: #f0f0f0;"' : ''}>
+                    ${index > 0 ? '<button type="button" class="btn-remove" onclick="removeEditParticipant(this)">Remove</button>' : ''}
+                </div>
+            `).join('');
+
+            if (group.participants.length < 5) {
+                editContainer.innerHTML += '<button type="button" class="btn-add-participant" onclick="addEditParticipant()">+ Add Member</button>';
+            }
 
             document.getElementById('groupEditDetailsModal').classList.add('show');
+        }
+
+        window.addEditParticipant = function() {
+            const container = document.getElementById('editParticipantsContainer');
+            const currentCount = container.querySelectorAll('.participant-input').length;
+
+            if (currentCount >= 5) {
+                alert('Maximum 5 members allowed');
+                return;
+            }
+
+            const addButton = container.querySelector('.btn-add-participant');
+            if (addButton) addButton.remove();
+
+            const newInput = document.createElement('div');
+            newInput.className = 'participant-input';
+            newInput.style.marginBottom = '10px';
+            newInput.innerHTML = `
+                <input type="text" placeholder="Member ${currentCount + 1}" class="edit-participant-name">
+                <button type="button" class="btn-remove" onclick="removeEditParticipant(this)">Remove</button>
+            `;
+            container.appendChild(newInput);
+
+            if (currentCount + 1 < 5) {
+                container.innerHTML += '<button type="button" class="btn-add-participant" onclick="addEditParticipant()">+ Add Member</button>';
+            }
+        }
+
+        window.removeEditParticipant = function(button) {
+            const container = document.getElementById('editParticipantsContainer');
+            const currentCount = container.querySelectorAll('.participant-input').length;
+
+            if (currentCount <= 2) {
+                alert('Minimum 2 members required');
+                return;
+            }
+
+            button.parentElement.remove();
+
+            const addButton = container.querySelector('.btn-add-participant');
+            if (!addButton && currentCount - 1 < 5) {
+                container.innerHTML += '<button type="button" class="btn-add-participant" onclick="addEditParticipant()">+ Add Member</button>';
+            }
         }
 
         window.closeGroupEditDetailsModal = function() {
@@ -900,8 +942,10 @@
         window.saveGroupChanges = async function() {
             const newGroupName = document.getElementById('editGroupName').value.trim();
             const newTopicName = document.getElementById('editTopicName').value.trim();
-            const participantInputs = document.querySelectorAll('#editGroupParticipantsContainer .participant-name');
-            const newParticipants = Array.from(participantInputs).map(input => input.value.trim()).filter(name => name !== '');
+            const participantInputs = document.querySelectorAll('.edit-participant-name');
+            const newParticipants = Array.from(participantInputs)
+                .map(input => input.value.trim())
+                .filter(name => name !== '');
 
             const alertDiv = document.getElementById('groupEditDetailsAlert');
             alertDiv.innerHTML = '';
@@ -914,18 +958,8 @@
                 showAlert('groupEditDetailsAlert', 'Please enter a topic name', 'error');
                 return;
             }
-            if (newParticipants.length === 0) {
-                showAlert('groupEditDetailsAlert', 'Please add at least one participant', 'error');
-                return;
-            }
-
-            if (allGroups.some(g => g.id !== currentEditGroupId && g.groupName.toLowerCase() === newGroupName.toLowerCase())) {
-                showAlert('groupEditDetailsAlert', '❌ This group name is already taken!', 'error');
-                return;
-            }
-
-            if (allGroups.some(g => g.id !== currentEditGroupId && g.topicName.toLowerCase() === newTopicName.toLowerCase())) {
-                showAlert('groupEditDetailsAlert', '❌ This topic is already registered!', 'error');
+            if (newParticipants.length < 2) {
+                showAlert('groupEditDetailsAlert', 'Please have at least 2 members', 'error');
                 return;
             }
 
@@ -934,10 +968,26 @@
                 ...allSolo.map(s => s.name)
             ].map(name => name.toLowerCase());
 
-            const duplicateParticipant = newParticipants.find(p => allExistingNames.includes(p.toLowerCase()));
+            for (let participant of newParticipants) {
+                if (allExistingNames.includes(participant.toLowerCase())) {
+                    showAlert('groupEditDetailsAlert', `❌ "${participant}" is already registered in another group!`, 'error');
+                    return;
+                }
+            }
 
-            if (duplicateParticipant) {
-                showAlert('groupEditDetailsAlert', `❌ "${duplicateParticipant}" is already registered!`, 'error');
+            const duplicates = newParticipants.filter((item, index) => newParticipants.indexOf(item) !== index);
+            if (duplicates.length > 0) {
+                showAlert('groupEditDetailsAlert', `❌ Duplicate names found: ${duplicates.join(', ')}`, 'error');
+                return;
+            }
+
+            const allTopics = [
+                ...allGroups.flatMap(g => g.id !== currentEditGroupId ? [g.topicName.toLowerCase()] : []),
+                ...allSolo.map(s => s.topic.toLowerCase())
+            ];
+
+            if (allTopics.includes(newTopicName.toLowerCase())) {
+                showAlert('groupEditDetailsAlert', '❌ This topic is already registered!', 'error');
                 return;
             }
 
@@ -946,11 +996,10 @@
                 await updateDoc(groupRef, {
                     groupName: newGroupName,
                     topicName: newTopicName,
-                    captain: newParticipants[0],
                     participants: newParticipants
                 });
 
-                showAlert('groupAlert', '✓ Group updated successfully!', 'success');
+                showAlert('groupAlert', '✓ Group details updated successfully!', 'success');
                 closeGroupEditDetailsModal();
                 await fetchData();
                 displayGroups();
@@ -963,7 +1012,7 @@
         window.openGroupDeleteModal = function(groupId) {
             currentDeleteGroupId = groupId;
             document.getElementById('groupDeleteAlert').innerHTML = '';
-            document.getElementById('captainPinDelete').value = '';
+            document.getElementById('groupVerifyDelete').value = '';
             document.getElementById('groupDeleteModal').classList.add('show');
         }
 
@@ -971,12 +1020,12 @@
             document.getElementById('groupDeleteModal').classList.remove('show');
         }
 
-        window.verifyCaptainPinDelete = async function() {
-            const pin = document.getElementById('captainPinDelete').value.trim();
+        window.verifyGroupForDelete = async function() {
+            const captainName = document.getElementById('groupVerifyDelete').value.trim();
             const group = allGroups.find(g => g.id === currentDeleteGroupId);
 
-            if (pin !== group.pin) {
-                showAlert('groupDeleteAlert', '❌ PIN is incorrect!', 'error');
+            if (captainName.toLowerCase() !== group.participants[0].toLowerCase()) {
+                showAlert('groupDeleteAlert', '❌ Captain name does not match!', 'error');
                 return;
             }
 
@@ -999,7 +1048,7 @@
             await fetchData();
 
             if (allGroups.length === 0) {
-                groupsList.innerHTML = '<div class="empty-message">No groups registered yet. Be the first to register!</div>';
+                groupsList.innerHTML = '<div class="empty-message">No groups registered yet. Be the first!</div>';
                 return;
             }
 
